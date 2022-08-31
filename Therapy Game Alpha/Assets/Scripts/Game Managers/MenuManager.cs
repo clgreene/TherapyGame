@@ -28,8 +28,6 @@ public class MenuManager : MonoBehaviour
 
     public PopupPrompt prompt;
 
-    float waitTime = 0.5f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -86,21 +84,36 @@ public class MenuManager : MonoBehaviour
     }
 
 
-    //File One Buttons//
+    // FILE ONE OPTIONS //
+
     public void loadSaveOne()
     {
-        brain.playing = true;
-        brain.activeGame = saveFileOne;
+        popupCanvas.enabled = true;
+        StartCoroutine(confirmLoadSaveOne());
+    }
+
+    IEnumerator confirmLoadSaveOne()
+    {
+        while (prompt.selected == false)
+        {
+            yield return null;
+        }
+        popupCanvas.enabled = false;
+        if (prompt.choice == 1)
+        {
+            saveFileOne.inUse = true;
+            brain.activeGame = saveFileOne;
+            brain.playing = true;
+        }
+        prompt.selected = false;
+        prompt.choice = 0;
+
     }
 
     public void beginSaveOne()
     {
-        
         popupCanvas.enabled = true;
-        saveFileOne.inUse = true;
-        brain.activeGame = saveFileOne;
         StartCoroutine(confirmBeginSaveOne());
-
     }
 
     IEnumerator confirmBeginSaveOne()
@@ -112,12 +125,9 @@ public class MenuManager : MonoBehaviour
         popupCanvas.enabled = false;
         if (prompt.choice == 1)
         {
+            saveFileOne.inUse = true;
+            brain.activeGame = saveFileOne;
             brain.playing = true;
-        }
-        else if (prompt.choice == 2)
-        {
-            saveFileOne.inUse = false;
-            brain.playing = false;
         }
         prompt.selected = false;
         prompt.choice = 0;
@@ -125,47 +135,162 @@ public class MenuManager : MonoBehaviour
 
     public void deleteSaveOne()
     {
-        saveFileOne.inUse = false;
+        popupCanvas.enabled = true;
+        StartCoroutine(confirmDeleteSaveOne());
     }
 
+    IEnumerator confirmDeleteSaveOne()
+    {
+        while (prompt.selected == false)
+        {
+            yield return null;
+        }
+        popupCanvas.enabled = false;
+        if (prompt.choice == 1)
+        {
+            //reset all values of save file one to default
+        }
+        prompt.selected = false;
+        prompt.choice = 0;
+    }
 
-    //File Two Buttons//
+    // FILE TWO OPTIONS //
+
     public void loadSaveTwo()
     {
-        brain.playing = true;
-        brain.activeGame = saveFileTwo;
+        popupCanvas.enabled = true;
+        StartCoroutine(confirmLoadSaveTwo());
+    }
+
+    IEnumerator confirmLoadSaveTwo()
+    {
+        while (prompt.selected == false)
+        {
+            yield return null;
+        }
+        popupCanvas.enabled = false;
+        if (prompt.choice == 1)
+        {
+            saveFileTwo.inUse = true;
+            brain.activeGame = saveFileTwo;
+            brain.playing = true;
+        }
+        prompt.selected = false;
+        prompt.choice = 0;
+
     }
 
     public void beginSaveTwo()
     {
-        saveFileTwo.inUse = true;
-        brain.playing = true;
-        brain.activeGame = saveFileTwo;
+        popupCanvas.enabled = true;
+        StartCoroutine(confirmBeginSaveTwo());
+    }
+
+    IEnumerator confirmBeginSaveTwo()
+    {
+        while (prompt.selected == false)
+        {
+            yield return null;
+        }
+        popupCanvas.enabled = false;
+        if (prompt.choice == 1)
+        {
+            saveFileTwo.inUse = true;
+            brain.activeGame = saveFileTwo;
+            brain.playing = true;
+        }
+        prompt.selected = false;
+        prompt.choice = 0;
     }
 
     public void deleteSaveTwo()
     {
-        saveFileTwo.inUse = false;
+        popupCanvas.enabled = true;
+        StartCoroutine(confirmDeleteSaveTwo());
     }
 
-    //File Three Buttons//
+    IEnumerator confirmDeleteSaveTwo()
+    {
+        while (prompt.selected == false)
+        {
+            yield return null;
+        }
+        popupCanvas.enabled = false;
+        if (prompt.choice == 1)
+        {
+            //reset all values of save file one to default
+        }
+        prompt.selected = false;
+        prompt.choice = 0;
+    }
+
+    // FILE THREE OPTIONS //
+
     public void loadSaveThree()
     {
-        brain.playing = true;
-        brain.activeGame = saveFileThree;
+        popupCanvas.enabled = true;
+        StartCoroutine(confirmLoadSaveThree());
+    }
+
+    IEnumerator confirmLoadSaveThree()
+    {
+        while (prompt.selected == false)
+        {
+            yield return null;
+        }
+        popupCanvas.enabled = false;
+        if (prompt.choice == 1)
+        {
+            saveFileThree.inUse = true;
+            brain.activeGame = saveFileThree;
+            brain.playing = true;
+        }
+        prompt.selected = false;
+        prompt.choice = 0;
+
     }
 
     public void beginSaveThree()
     {
-        saveFileThree.inUse = true;
-        brain.playing = true;
-        brain.activeGame = saveFileThree;
+        popupCanvas.enabled = true;
+        StartCoroutine(confirmBeginSaveThree());
+    }
+
+    IEnumerator confirmBeginSaveThree()
+    {
+        while (prompt.selected == false)
+        {
+            yield return null;
+        }
+        popupCanvas.enabled = false;
+        if (prompt.choice == 1)
+        {
+            saveFileThree.inUse = true;
+            brain.activeGame = saveFileThree;
+            brain.playing = true;
+        }
+        prompt.selected = false;
+        prompt.choice = 0;
     }
 
     public void deleteSaveThree()
     {
-        saveFileThree.inUse = false;
+        popupCanvas.enabled = true;
+        StartCoroutine(confirmDeleteSaveThree());
     }
 
-
+    IEnumerator confirmDeleteSaveThree()
+    {
+        while (prompt.selected == false)
+        {
+            yield return null;
+        }
+        popupCanvas.enabled = false;
+        if (prompt.choice == 1)
+        {
+            //reset all values of save file one to default
+        }
+        prompt.selected = false;
+        prompt.choice = 0;
+    }
 }
