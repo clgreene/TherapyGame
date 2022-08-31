@@ -30,6 +30,6 @@ public class PopupPrompt : MonoBehaviour
     public void deny()
     {
         choice = 2;
-        selected = false;
+        selected = true;
     }
 }

@@ -95,24 +95,20 @@ public class MenuManager : MonoBehaviour
     {
         
         popupCanvas.enabled = true;
-
-        while(prompt.selected == false)
+        saveFileOne.inUse = true;
+        brain.activeGame = saveFileOne;
+        StartCoroutine(waitForConfirmation());
+        popupCanvas.enabled = false;
+        if (prompt.choice == 1)
         {
-
-        }
-        if(prompt.choice == 1) //yes
-        {
-            popupCanvas.enabled = false;
-            saveFileOne.inUse = true;
             brain.playing = true;
-            brain.activeGame = saveFileOne;
-            prompt.choice = 0;
         }
-        if (prompt.choice == 2) //no
+        else if (prompt.choice == 2)
         {
-            popupCanvas.enabled = false;
-            prompt.choice = 0;
+            saveFileOne.inUse = false;
+            brain.playing = false;
         }
+        prompt.choice = 0;
 
     }
 
@@ -160,5 +156,9 @@ public class MenuManager : MonoBehaviour
         saveFileThree.inUse = false;
     }
 
+    IEnumerator waitForConfirmation()
+    {
 
+        yield return new WaitUntil(() => prompt.selected);
+    }
 }
