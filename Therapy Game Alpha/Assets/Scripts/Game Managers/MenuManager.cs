@@ -28,6 +28,8 @@ public class MenuManager : MonoBehaviour
 
     public PopupPrompt prompt;
 
+    float waitTime = 0.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -97,7 +99,16 @@ public class MenuManager : MonoBehaviour
         popupCanvas.enabled = true;
         saveFileOne.inUse = true;
         brain.activeGame = saveFileOne;
-        StartCoroutine(waitForConfirmation());
+        StartCoroutine(confirmBeginSaveOne());
+
+    }
+
+    IEnumerator confirmBeginSaveOne()
+    {
+        while (prompt.selected == false)
+        {
+            yield return null;
+        }
         popupCanvas.enabled = false;
         if (prompt.choice == 1)
         {
@@ -108,8 +119,8 @@ public class MenuManager : MonoBehaviour
             saveFileOne.inUse = false;
             brain.playing = false;
         }
+        prompt.selected = false;
         prompt.choice = 0;
-
     }
 
     public void deleteSaveOne()
@@ -156,9 +167,5 @@ public class MenuManager : MonoBehaviour
         saveFileThree.inUse = false;
     }
 
-    IEnumerator waitForConfirmation()
-    {
 
-        yield return new WaitUntil(() => prompt.selected);
-    }
 }
