@@ -148,6 +148,7 @@ public class MenuManager : MonoBehaviour
         popupCanvas.enabled = false;
         if (prompt.choice == 1)
         {
+            saveFileOne.inUse = false;
             //reset all values of save file one to default
         }
         prompt.selected = false;
@@ -218,6 +219,7 @@ public class MenuManager : MonoBehaviour
         popupCanvas.enabled = false;
         if (prompt.choice == 1)
         {
+            saveFileTwo.inUse = false;
             //reset all values of save file one to default
         }
         prompt.selected = false;
@@ -288,6 +290,7 @@ public class MenuManager : MonoBehaviour
         popupCanvas.enabled = false;
         if (prompt.choice == 1)
         {
+            saveFileThree.inUse = false;
             //reset all values of save file one to default
         }
         prompt.selected = false;
