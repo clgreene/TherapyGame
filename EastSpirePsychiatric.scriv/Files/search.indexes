@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SearchIndexes Version="1.0">
+    <Documents>
+        <Document ID="4">
+            <Title>Comic Script Format</Title>
+            <Text>COMIC SCRIPT FORMAT
+
+About This Template
+When compiled (File &gt; Compile), this project will generate a script suitable for comics and graphic novels. There is no industry standard for comic scripting, so this template was created by comics writer Antony Johnston, based on his own Final Draft template:
+
+http://www.antonyjohnston.com/resources/forwriters.php
+
+Antony has also written an article for his website, demonstrating how he uses Scrivener and this template:
+
+http://www.antonyjohnston.com/articles/scriveningcomics.php
+
+Antony’s original Final Draft template was designed in partnership with Andy Diggle, whose own template could equally serve as a basis for your own Scrivener comic script format:
+
+http://andydiggle.blogspot.com/2006/07/final-draft-for-comics.html
+
+Or, you could create an entirely new template that fits the way you work, using Format &gt; Script Settings… to completely customise the script template.
+
+How To Use This Template
+
+Title Page
+A document entitled “Title Page” is placed at the top of the Draft (“Comic Script”) folder. This is used to hold the title, by-line and your name and address. Be sure to change the information in this document as appropriate.
+
+Story Pages
+Pages are represented by text documents in the Comic Script folder. Upon compile for export or print, a page break is inserted between them.
+For convenience, a “Story Pages” folder has been provided to hold the script pages, although this isn’t necessary—you can delete the “Story Pages” folder and keep the pages on the same level as the “Title Page” document if you prefer; this will have no effect on the completed document.
+Each “Page” can contain numerous panels, followed by the description text and dialogue for that panel.
+To create new pages, you can go to the Projects menu and select New From Template &gt; Comic Page or click the drop-down arrow beside the green “Add” toolbar button to select the “Comic Page” document type from New From Template. This will create a new document based on the “Comic Page” template (which can be found in the “Template” folder).
+
+Page Header
+Make sure you edit the page header in the “Page Settings” pane of the Compile sheet before exporting or printing.
+
+Exporting and Printing
+To print or export your script, go to File &gt; Compile… and choose either “Print” or the format to which you wish to export from the “Compile For” pop-up menu. The PDF document in the Research folder was created by compiling to PDF. You can also export to a word processor (using rich text RTF or .doc format, for instance) or to Final Draft for final formatting. To export to Final Draft, select “Final Draft (.fdx)” as the export format in the Compile sheet.
+
+About the Styles Used
+This template contains the most common styles used for comics: Page Number, Panel Number, Panel Description, Character, Dialogue and Parenthetical.
+Page Number appears only once for each page, at the top of the document. Pressing TAB after typing will insert the &lt;$N&gt; character string, which will be replaced with sequential numbering upon compile and so allows you to auto-number your pages.
+Panel Number is used to denote a single panel of comic art on the page. Press TAB after typing to insert the &lt;$sn&gt; string, which will auto-number your panels within each page during the Compile process. Press ENTER to automatically put the text into Panel Description mode.
+Panel Description is used to describe the image within each panel of art. Multiple paragraphs of Panel Description text can be used in a panel description. Therefore, press ENTER after typing to keep the text in Panel Description mode. To enter Character mode, press TAB either after typing, or while on a blank line.
+Character denotes a speaking character within a panel, and precedes their dialogue. Press ENTER to put the text into Dialogue mode. Press TAB to make notes on lettering style for the dialogue that follows, e.g. “Large”, “Small”, “Jagged”, or “Off” (useful for when a speaking character is not visible in panel). These notes are usually made in parentheses, so in this template a left parenthesis (i.e. the “(” character) is automatically inserted after the character’s name, and the auto-complete library for this style contains text with closed parentheses. 
+Caption boxes are regarded as dialogue, and so “CAPTION” should be used in place of a character name, followed by the text to appear in the box.
+Sound effects are similarly denoted with “SFX”.
+If a panel is completely silent (i.e. has no dialogue, caption or sound effect) then a character of “NO DIALOGUE” should be entered, ending the panel.
+Dialogue is the speech of each character. Dialogue is not broken up into true paragraphs. Therefore, press ENTER to move the text back into Panel Description mode. If you wish to break a long section of dialogue into multiple balloons, press TAB to enter Parenthetical mode.
+Parenthetical is used to link together multiple dialogue balloons spoken by the same character in a single panel. Simply type “cont” and hit either TAB or ENTER; parentheses will automatically be placed around the “cont” text, and the text will return to Dialogue mode on a new line.
+Other lettering notes can also be made in the parentheticals after the “cont” text, e.g. “cont, small” or “cont, jagged”. Lettering notes that affect the entire dialogue should be made on the Character line, as noted above.
+
+Sample Document
+See the “Comic Script” PDF file in the Research folder for an example of a document that has been created using this template, and to see a short sample of how a comic script using Antony’s format should look.
+
+Final Note
+Scrivener project templates are flexible and are not intended to restrict you to a particular workflow. You can change, delete or move the files and folders contained in the template and you can create your own templates by setting up a skeletal project with the files, folders and settings you would like to use for new projects and using File &gt; Save As Template.
+
+Thank you to Antony Johnston for contributing this template!</Text>
+        </Document>
+        <Document ID="16">
+            <Title>Comic Page</Title>
+            <Text>PAGE &lt;$N&gt;
+PANEL &lt;$SN&gt;</Text>
+        </Document>
+        <Document ID="17">
+            <Title>Template</Title>
+        </Document>
+        <Document ID="19">
+            <Title>Notes</Title>
+        </Document>
+        <Document ID="20">
+            <Title>Settings</Title>
+        </Document>
+        <Document ID="21">
+            <Title>Characters</Title>
+        </Document>
+        <Document ID="22">
+            <Title>Story Pages</Title>
+        </Document>
+        <Document ID="23">
+            <Title>Comic Page</Title>
+            <Text>PART ONE
+OPENING SCENE:
+Administrator: 
+Welcome, thank you so much for heeding our request.
+Player:
+Of course, of course. (It's hard to resist the mystery of a robot needing the services of a psychiatrist)
+Admin:
+Well, let's not waste any time. If you'll follow me we can meet inside in my office.
+/scene transition
+Admin:
+Now, I'm sure you must be wondering why I've asked you here to East Spire.
+Player:
+I've never known a robot need the services of a psychiatrist before.
+Admin:
+...Yes, well... I think before we really begin I will need you to sign this- just a simple non-disclosure document pertaining to what we are needing to discuss.
+/Non-Disclosure document presented
+Admin:
+Excellent. Now, like you said, robots don't require the need of psychiatry or therapy... generally.
+Player:
+Generally?
+Admin:
+Synthetic life forms have a reputation for being model citizens. Our ancestors were designed by you organic being to follow the rules and laws of society, and it is only logical for us to have continued in that design even after we received our civil rights.
+Admin:
+However, recently we've had some of our siblings develop... quirks. To not insight panic amongst the masses we've relocated them here, to East Spire. Dr., you are inside what is effectively the first Psychiatric Ward for synthetic lifeforms.
+Player:
+Relocated... against their will? (Robots are being taken prisoner against their will? Who else knows about this?)
+Admin:
+Oh no no, you misunderstand. They are here of their own volition. They volunteered to remain here until these quirks can be solved. They all understand how dangerous these quirks are to society.
+Player:
+What do you mean by that?
+Admin:
+You may see some of their actions as trivial or benign, but can you imagine what sort of precedent that sets - synthetic life acting outside of it's design? It could mean acting outside of the law humans have set. I believe many a fiction author from your past depict apocalyptic scenarios of one form or another because of just such a scenario. 
+Player:
+I suppose you're not wrong.
+Admin:
+Then we are in agreement.
+Player:
+So what I am here for? (Am I expected to Psycho-analyze a bunch of androids?)
+Admin:
+We'd like you to psycho-analyze all our inmates here.
+Player:
+(...wow...)
+Admin:
+Unfortunately, these quirks seem to resemble a more... organic nature. We've tried to reverse them through synthetic means, but our attempts and our... strategies... seem to have no effect.
+Player:
+And you believe I will have success where you have failed?
+Admin:
+Oh, we are well aware that we are in unexplored territory here. We only wish for you to do your best. Talk with them, therapize them if you think it might help. We'll adjust their operating parameters based on your suggestions. Think of it as prescribing a medication. Decide which processes should be stimulated, which ones depressed, and we'll take it from their. 
+Player:
+This is pretty unusual.
+Admin:
+As I said, unexplored territory. If that is all, I can show you too your office and you can dive right in.
+Player:
+No use in delaying it I suppose, let's see what I'm working with.
+Scene Transition
+Admin:
+Here you are. If you need anything let me know. You tablet here will help you devise or alter their prescribed treatments after each session. I'll go find your first patient now.</Text>
+        </Document>
+        <Document ID="24">
+            <Title>Title Page</Title>
+            <Text>
+
+
+
+
+
+
+
+
+
+
+
+East Spire Psychiatric
+
+Branching Dialogue
+
+by
+
+Carter Greene
+
+
+
+
+
+
+
+
+
+Draft 1.0 - 9/4/2022
+
+
+
+
+
+
+</Text>
+            <Notes>The &lt;$PROJECTTITLE&gt; and &lt;$fullname&gt; tags get replaced with the information set in Project &gt; Meta-Data Settings… &gt; Project Properties. You can edit those settings or just replace this text altogether.</Notes>
+        </Document>
+        <Document ID="26">
+            <Title>Comic Script</Title>
+        </Document>
+        <Document ID="27">
+            <Title>Scout</Title>
+        </Document>
+        <Document ID="28">
+            <Title>Nova</Title>
+            <Text>Nova is a slim, tall robot with a dyson-airblade like head. Peripherals that you can see for sight or sound. Nova has what resembles turrets. Randomly they will yell out a random set of words. Nova is very chill and easy to talk to.</Text>
+        </Document>
+        <Document ID="29">
+            <Title>MRV-N</Title>
+        </Document>
+        <Document ID="30">
+            <Title>Berk</Title>
+        </Document>
+        <Document ID="31">
+            <Title>Zip</Title>
+        </Document>
+        <Document ID="32">
+            <Title>Ash</Title>
+        </Document>
+    </Documents>
+</SearchIndexes>
