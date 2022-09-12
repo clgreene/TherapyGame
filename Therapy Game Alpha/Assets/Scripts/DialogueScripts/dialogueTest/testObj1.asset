@@ -12,8 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c317b8a3f1ea614e943b98740da5889, type: 3}
   m_Name: testObj1
   m_EditorClassIdentifier: 
-  charName: 
-  sequence: []
+  charName: Nova
+  sequence:
+  - Hi, my name is Nova
+  - I'm one of the first robots to go through the experiments here at east spire
+  - I've started killing people
+  - whats your name?
   character: {fileID: 0}
-  responses: []
-  branches: []
+  responses:
+  - I don't want to tell you...
+  - my name is Carter
+  branches:
+  - {fileID: 0}
+  - {fileID: 0}

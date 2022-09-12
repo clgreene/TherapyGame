@@ -8,6 +8,8 @@ public class DialogueSequenceManager : MonoBehaviour
     //make private
     public DialogueSequenceObject currentSequence;
 
+    public DialogueTrigger currentTrigger;
+
     public GameObject dialogueBox;
     public GameObject responseOptions;
 
@@ -19,6 +21,7 @@ public class DialogueSequenceManager : MonoBehaviour
     public Button responseThree;
 
 
+    //engaged by the dialogue trigger
     public void StartDialogue()
     {
         dialogueBox.SetActive(true);
@@ -27,6 +30,7 @@ public class DialogueSequenceManager : MonoBehaviour
 
     }
 
+    //engaged by the next button on the dialogue canvas
     public void ContinueDialogue()
     {
         if(currentSequence.sequence.Length >= currentLine + 1)
@@ -47,6 +51,7 @@ public class DialogueSequenceManager : MonoBehaviour
             }
         }
     }
+
 
     public void Respond()
     {
