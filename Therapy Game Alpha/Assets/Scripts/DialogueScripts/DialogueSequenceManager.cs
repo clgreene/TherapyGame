@@ -5,21 +5,23 @@ using UnityEngine.UI;
 
 public class DialogueSequenceManager : MonoBehaviour
 {
-    //make private
+    //set by DialogueTrigger
     public DialogueSequenceObject currentSequence;
-
     public DialogueTrigger currentTrigger;
 
+
+    //set in engine
     public GameObject dialogueBox;
     public GameObject responseOptions;
-
-    public int currentLine;
-
     public Text displayedDialogue;
+
+    //set in local functions
+    int currentLine;
+
+    //defined in local functions by dialogueSequenceObject
     public Button responseOne;
     public Button responseTwo;
     public Button responseThree;
-
 
     //engaged by the dialogue trigger
     public void StartDialogue()

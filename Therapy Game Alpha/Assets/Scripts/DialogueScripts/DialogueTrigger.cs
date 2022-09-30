@@ -6,10 +6,8 @@ public class DialogueTrigger : MonoBehaviour
 {
 
     DialogueSequenceManager dialogueManager;
-
     public DialogueSequenceObject triggeredSequence;
-
-    public DialogueTrigger me;
+    DialogueTrigger me;
 
 
 
@@ -20,6 +18,7 @@ public class DialogueTrigger : MonoBehaviour
         me = this;
     }
 
+    //function that starts a dialogue sequence
     public void StartDialogue()
     {
         dialogueManager.currentSequence = triggeredSequence;
