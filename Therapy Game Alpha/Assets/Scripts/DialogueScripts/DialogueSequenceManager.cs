@@ -17,17 +17,24 @@ public class DialogueSequenceManager : MonoBehaviour
 
     //set in local functions
     int currentLine;
+    bool dialogueEnabled;
 
     //defined in local functions by dialogueSequenceObject
     public Button responseOne;
     public Button responseTwo;
     public Button responseThree;
 
+    void Start()
+    {
+        dialogueEnabled = false;
+    }
+
     //engaged by the dialogue trigger
     public void StartDialogue()
     {
         dialogueBox.SetActive(true);
         currentLine = 0;
+        dialogueEnabled = true;
         displayedDialogue.text = currentSequence.sequence[currentLine];
 
     }
@@ -67,15 +74,14 @@ public class DialogueSequenceManager : MonoBehaviour
         dialogueBox.SetActive(false);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Return) && dialogueEnabled == true)
+        {
+            ContinueDialogue();
+        }
     }
 }
