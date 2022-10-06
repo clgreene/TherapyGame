@@ -42,7 +42,7 @@ public class DialogueSequenceManager : MonoBehaviour
     //engaged by the next button on the dialogue canvas
     public void ContinueDialogue()
     {
-        if(currentSequence.sequence.Length >= currentLine + 1)
+        if(currentSequence.sequence.Length > currentLine + 1)
         {
             currentLine += 1;
             displayedDialogue.text = currentSequence.sequence[currentLine];
@@ -72,6 +72,7 @@ public class DialogueSequenceManager : MonoBehaviour
     public void ExitDialogue()
     {
         dialogueBox.SetActive(false);
+        dialogueEnabled = false;
     }
 
 
