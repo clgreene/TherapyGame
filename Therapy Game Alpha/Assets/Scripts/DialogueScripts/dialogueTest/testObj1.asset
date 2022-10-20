@@ -19,9 +19,7 @@ MonoBehaviour:
   - I've started killing people
   - whats your name?
   character: {fileID: 0}
-  responses:
-  - I don't want to tell you...
-  - my name is Carter
+  responses: []
   branches:
   - {fileID: 0}
   - {fileID: 0}
