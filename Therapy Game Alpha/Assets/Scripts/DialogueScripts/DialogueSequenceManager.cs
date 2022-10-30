@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class DialogueSequenceManager : MonoBehaviour
 {
+    //current save file holding all dialogue branching information
+    public SaveFile currentStatus;
+
     //set by DialogueTrigger
     public DialogueSequenceObject currentSequence;
     public DialogueTrigger currentTrigger;
@@ -23,6 +26,9 @@ public class DialogueSequenceManager : MonoBehaviour
     public Button responseOne;
     public Button responseTwo;
     public Button responseThree;
+
+    //character Names to reference for overriding the currentstatus on dialogue end or response given functions
+    public string charName;
 
     void Start()
     {
@@ -71,7 +77,78 @@ public class DialogueSequenceManager : MonoBehaviour
 
     public void ExitDialogue()
     {
-        
+        //figuring out who we are talking to, then determining whose dialogue we need to update;
+        switch (charName)
+        {
+            case "Nova": //are we talking to Nova right now?
+                currentStatus.Nova_Dialogue = currentSequence.branches[0]; //Okay then, update Novas next dialogue they will load.
+                if (currentSequence.branches.Length > 1)//are there more branches to update?
+                {
+                    for (int i = 1; i < currentSequence.branches.Length; i++)//okay then, lets figure out whose branches we are updating.
+                    {
+                        switch (currentSequence.branches[i].charName)
+                        {
+                            case "Nova"://are we updating Novas? 
+                                currentStatus.Nova_Dialogue = currentSequence.branches[i]; //set novas next dialogue to whatever this branch says to
+                                break;
+                            case "Sweeper"://are we updating Sweepers?
+                                currentStatus.Sweeper_Dialogue = currentSequence.branches[i]; //set sweepers next dial to whatever this branch says to
+                                break;
+                            case "MrvN":
+                                currentStatus.MrvN_Dialogue = currentSequence.branches[i];
+                                break;
+                        }
+
+                    }
+                }
+                break;
+
+            case "Sweeper": 
+                currentStatus.Sweeper_Dialogue = currentSequence.branches[0];
+                if (currentSequence.branches.Length > 1)
+                {
+                    for (int i = 1; i < currentSequence.branches.Length; i++)
+                    {
+                        switch (currentSequence.branches[i].charName)
+                        {
+                            case "Nova":
+                                currentStatus.Nova_Dialogue = currentSequence.branches[i];
+                                break;
+                            case "Sweeper":
+                                currentStatus.Sweeper_Dialogue = currentSequence.branches[i];
+                                break;
+                            case "MrvN":
+                                currentStatus.MrvN_Dialogue = currentSequence.branches[i];
+                                break;
+                        }
+
+                    }
+                }
+                break;
+
+            case "MrvN":
+                currentStatus.MrvN_Dialogue = currentSequence.branches[0];
+                if (currentSequence.branches.Length > 1)
+                {
+                    for (int i = 1; i < currentSequence.branches.Length; i++)
+                    {
+                        switch (currentSequence.branches[i].charName)
+                        {
+                            case "Nova":
+                                currentStatus.Nova_Dialogue = currentSequence.branches[i];
+                                break;
+                            case "Sweeper":
+                                currentStatus.Sweeper_Dialogue = currentSequence.branches[i];
+                                break;
+                            case "MrvN":
+                                currentStatus.MrvN_Dialogue = currentSequence.branches[i];
+                                break;
+                        }
+
+                    }
+                }
+                break;
+        }
         dialogueBox.SetActive(false);
         dialogueEnabled = false;
     }

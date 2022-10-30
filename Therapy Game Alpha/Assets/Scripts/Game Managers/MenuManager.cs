@@ -128,7 +128,7 @@ public class MenuManager : MonoBehaviour
         if (prompt.choice == 1)
         {
             saveFileOne.inUse = true;
-            
+            currentStatus = saveFileOne;
             brain.activeGame = saveFileOne;
             brain.playing = true;
             SceneManager.LoadScene(brain.activeGame.scene, LoadSceneMode.Single);

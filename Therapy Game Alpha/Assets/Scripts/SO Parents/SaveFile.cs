@@ -12,4 +12,5 @@ public class SaveFile : ScriptableObject
     public DialogueSequenceObject currentDialogue;
     public DialogueSequenceObject MrvN_Dialogue;
     public DialogueSequenceObject Sweeper_Dialogue;
+    public DialogueSequenceObject Nova_Dialogue;
 }

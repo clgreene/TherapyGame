@@ -25,6 +25,23 @@ public class DialogueTrigger : MonoBehaviour
         dialogueManager.currentTrigger = me;
         dialogueManager.StartDialogue();
 
+        switch (triggeredSequence.charName)
+        {
+            case "Nova":
+                dialogueManager.charName = "Nova";
+                break;
+            case "MrvN":
+                dialogueManager.charName = "MrvN";
+                break;
+            case "Sweeper":
+                dialogueManager.charName = "Sweeper";
+                break;
+        }
+    }
+
+    public void EndDialogue()
+    {
+
     }
 
     // Update is called once per frame
