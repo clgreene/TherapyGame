@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c317b8a3f1ea614e943b98740da5889, type: 3}
   m_Name: testObj2
   m_EditorClassIdentifier: 
-  charName: Me
+  charName: MrvN
   sequence:
-  - hello
+  - hello, I'm MrvN
   character: {fileID: 0}
   responses: []
   branches: []

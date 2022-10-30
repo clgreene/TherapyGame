@@ -20,4 +20,6 @@ MonoBehaviour:
   - whats your name?
   character: {fileID: 0}
   responses: []
-  branches: []
+  branches:
+  - {fileID: 11400000, guid: 682d406bd7b651045b4eeb9c212721d8, type: 2}
+  - {fileID: 11400000, guid: b5fba5a35918c8c49bbffc2e3e952c38, type: 2}

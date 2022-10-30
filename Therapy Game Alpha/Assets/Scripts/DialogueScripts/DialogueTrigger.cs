@@ -6,7 +6,9 @@ public class DialogueTrigger : MonoBehaviour
 {
 
     DialogueSequenceManager dialogueManager;
-    public DialogueSequenceObject triggeredSequence;
+    public SaveFile currentStatus;
+    public string charName;
+    DialogueSequenceObject triggeredSequence;
     DialogueTrigger me;
 
 
@@ -14,6 +16,19 @@ public class DialogueTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        switch (charName)
+        {
+            case "Nova":
+                triggeredSequence = currentStatus.Nova_Dialogue;
+                break;
+            case "MrvN":
+                triggeredSequence = currentStatus.MrvN_Dialogue;
+                break;
+            case "Sweeper":
+                triggeredSequence = currentStatus.Sweeper_Dialogue;
+                break;
+
+        }
         dialogueManager = FindObjectOfType<DialogueSequenceManager>();
         me = this;
     }
