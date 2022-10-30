@@ -19,8 +19,8 @@ public class DialogueSequenceManager : MonoBehaviour
     public Text displayedDialogue;
 
     //set in local functions
-    int currentLine;
-    bool dialogueEnabled;
+    public int currentLine;
+    public bool dialogueEnabled;
 
     //defined in local functions by dialogueSequenceObject
     public Button responseOne;
@@ -56,6 +56,7 @@ public class DialogueSequenceManager : MonoBehaviour
 
         else
         {
+            Debug.Log("We've made it to the else statement.");
             if(currentSequence.responses.Length > 0)
             {
                 Respond();
@@ -149,6 +150,8 @@ public class DialogueSequenceManager : MonoBehaviour
                 }
                 break;
         }
+        currentTrigger.charName = currentSequence.nextCharacter;
+        currentLine = 0;
         dialogueBox.SetActive(false);
         dialogueEnabled = false;
     }

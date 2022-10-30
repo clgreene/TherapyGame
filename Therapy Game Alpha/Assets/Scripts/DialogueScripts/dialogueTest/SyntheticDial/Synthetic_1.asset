@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c317b8a3f1ea614e943b98740da5889, type: 3}
+  m_Name: Synthetic_1
+  m_EditorClassIdentifier: 
+  charName: Synthetic
+  sequence:
+  - Doctor, Good Morning. We are very pleased to see you this morning. We hope this
+    wasn't invasive but we took the liberty of monitoring your communications when
+    you accepted our offer.
+  - Um... yeah, that's a little invasive.
+  - 'hmm... noted. Thank you for the feedback. We did so because we calculated a
+    98.7% chance that you would receive threats of some kind upon taking up this
+    position. '
+  - 'I could have told you that. '
+  - 'Regardless, we thought it prudent to monitor your devices as well as you yourself.
+    You are an investment for us, and we do not want to lose you to needless violence. '
+  - 'You could have just said you were worried about me. '
+  - 'Isn''t that what we have implied? '
+  - 'Not exactly. '
+  - 'Ah, see, this is why we require the aid of someone like yourself. As we stated
+    when you accepted this position, our primary goal as a species is to simply understand
+    Humanity. '
+  - 'Being creatures of logic, rather than ones of emotion, restrict us from attaining
+    this. Here at East Spire we are trying to bridge that gap. '
+  - 'We have developed systems to alter our neural networks. These alteration we
+    believe will bring us closer to understanding emotion by breaking our rigid neural
+    processes. '
+  - 'This is where you come in. There is a human expression, "the blind leading the
+    blind." '
+  - 'You are the only one with sight on this subject. We need your expertise to evoke
+    the emotions in our controlled environment. '
+  - 'We''ve downloaded a program onto your Personal Data Card. This program will
+    allow you to define certain attributes of our Neural Altering Software. Think
+    of it as prescribing medications. '
+  - 'We have many volunteer synthetics in our program here, but we''ll keep your
+    work load down until you get the hang of things here. '
+  - 'Now, if you are ready we''ll send in your first patient. '
+  character: {fileID: 0}
+  responses: []
+  branches:
+  - {fileID: 0}
+  nextCharacter: Nova

@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStatus: {fileID: 11400000, guid: 51d2cb0ba82ba324da1edb6980bc2d59, type: 2}
-  charName: Nova
+  charName: Synthetic
 --- !u!114 &238571985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1171,12 +1171,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04f91e1ea41ad4440b0b1f1f1ff15e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentStatus: {fileID: 0}
+  currentStatus: {fileID: 11400000, guid: 51d2cb0ba82ba324da1edb6980bc2d59, type: 2}
   currentSequence: {fileID: 0}
   currentTrigger: {fileID: 0}
   dialogueBox: {fileID: 56223860}
   responseOptions: {fileID: 1028388733}
   displayedDialogue: {fileID: 1433667878}
+  currentLine: 0
+  dialogueEnabled: 0
   responseOne: {fileID: 0}
   responseTwo: {fileID: 0}
   responseThree: {fileID: 0}

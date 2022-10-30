@@ -3819,6 +3819,7 @@ MonoBehaviour:
   saveFileOne: {fileID: 11400000, guid: a6ce5b39901b05f41ad34789173a9b85, type: 2}
   saveFileTwo: {fileID: 11400000, guid: 0f0e6d0890feffa4fbfa5e2f7a129d06, type: 2}
   saveFileThree: {fileID: 11400000, guid: a5f3a1a54ef0cdc4f816c543ca868117, type: 2}
+  currentStatus: {fileID: 11400000, guid: 51d2cb0ba82ba324da1edb6980bc2d59, type: 2}
   startButtonOne: {fileID: 74315486}
   startButtonTwo: {fileID: 287778370}
   startButtonThree: {fileID: 2074235285}

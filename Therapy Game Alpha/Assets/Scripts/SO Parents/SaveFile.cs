@@ -10,6 +10,7 @@ public class SaveFile : ScriptableObject
     public bool inUse;
     public string scene;
     public DialogueSequenceObject currentDialogue;
+    public DialogueSequenceObject SyntheticDialogue;
     public DialogueSequenceObject MrvN_Dialogue;
     public DialogueSequenceObject Sweeper_Dialogue;
     public DialogueSequenceObject Nova_Dialogue;

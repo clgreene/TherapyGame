@@ -128,9 +128,9 @@ public class MenuManager : MonoBehaviour
         if (prompt.choice == 1)
         {
             saveFileOne.inUse = true;
-            currentStatus = saveFileOne;
             brain.activeGame = saveFileOne;
             brain.playing = true;
+            setCurrentStatus();
             SceneManager.LoadScene(brain.activeGame.scene, LoadSceneMode.Single);
         }
         prompt.selected = false;
@@ -300,4 +300,21 @@ public class MenuManager : MonoBehaviour
         prompt.selected = false;
         prompt.choice = 0;
     }
+
+
+
+
+    void setCurrentStatus()
+    {
+        currentStatus.scene = saveFileOne.scene;
+        currentStatus.currentDialogue = saveFileOne.currentDialogue;
+        currentStatus.SyntheticDialogue = saveFileOne.SyntheticDialogue;
+        currentStatus.MrvN_Dialogue = saveFileOne.MrvN_Dialogue;
+        currentStatus.Sweeper_Dialogue = saveFileOne.Sweeper_Dialogue;
+        currentStatus.Nova_Dialogue = saveFileOne.Nova_Dialogue;
+    }
 }
+
+
+
+

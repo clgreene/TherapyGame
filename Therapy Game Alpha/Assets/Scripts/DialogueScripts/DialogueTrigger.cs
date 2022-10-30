@@ -18,6 +18,9 @@ public class DialogueTrigger : MonoBehaviour
     {
         switch (charName)
         {
+            case "Synthetic":
+                triggeredSequence = currentStatus.SyntheticDialogue;
+                break;
             case "Nova":
                 triggeredSequence = currentStatus.Nova_Dialogue;
                 break;
@@ -36,6 +39,23 @@ public class DialogueTrigger : MonoBehaviour
     //function that starts a dialogue sequence
     public void StartDialogue()
     {
+        switch (charName)
+        {
+            case "Synthetic":
+                triggeredSequence = currentStatus.SyntheticDialogue;
+                break;
+            case "Nova":
+                triggeredSequence = currentStatus.Nova_Dialogue;
+                break;
+            case "MrvN":
+                triggeredSequence = currentStatus.MrvN_Dialogue;
+                break;
+            case "Sweeper":
+                triggeredSequence = currentStatus.Sweeper_Dialogue;
+                break;
+
+        }//who are we talking to?
+
         dialogueManager.currentSequence = triggeredSequence;
         dialogueManager.currentTrigger = me;
         dialogueManager.StartDialogue();

@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: SaveFileOne
   m_EditorClassIdentifier: 
   saveFileNum: 1
-  inUse: 0
+  inUse: 1
   scene: Office
-  currentDialogue: {fileID: 11400000, guid: 125f621f690bd1643a79574005f8091a, type: 2}
-  MrvN_Dialogue: {fileID: 11400000, guid: 682d406bd7b651045b4eeb9c212721d8, type: 2}
-  Sweeper_Dialogue: {fileID: 11400000, guid: b5fba5a35918c8c49bbffc2e3e952c38, type: 2}
+  currentDialogue: {fileID: 11400000, guid: 3464cfcf76c108b40853718cd311f166, type: 2}
+  SyntheticDialogue: {fileID: 11400000, guid: 3464cfcf76c108b40853718cd311f166, type: 2}
+  MrvN_Dialogue: {fileID: 11400000, guid: 0c5ebececd9179d4e83ac0e58f8ef4e7, type: 2}
+  Sweeper_Dialogue: {fileID: 11400000, guid: 3cd4ce3dca893164cbb1ab1634b71f6d, type: 2}
+  Nova_Dialogue: {fileID: 11400000, guid: 7839d4d37371a8d48be672dc0fbff3c4, type: 2}
