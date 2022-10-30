@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0510b8c36ddc8d34e91e5392b63d72e7, type: 3}
-  m_Name: SaveFileThree
+  m_Name: CurrentStatus
   m_EditorClassIdentifier: 
-  saveFileNum: 3
+  saveFileNum: 0
   inUse: 0
-  scene: Office
-  currentDialogue: {fileID: 11400000, guid: 682d406bd7b651045b4eeb9c212721d8, type: 2}
-  MrvN_Dialogue: {fileID: 11400000, guid: 682d406bd7b651045b4eeb9c212721d8, type: 2}
-  Sweeper_Dialogue: {fileID: 11400000, guid: 125f621f690bd1643a79574005f8091a, type: 2}
+  scene: 
+  currentDialogue: {fileID: 0}
+  MrvN_Dialogue: {fileID: 0}
+  Sweeper_Dialogue: {fileID: 0}

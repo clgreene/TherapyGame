@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class MenuManager : MonoBehaviour
     public SaveFile saveFileOne;
     public SaveFile saveFileTwo;
     public SaveFile saveFileThree;
+    public SaveFile currentStatus; //where you are at right now while playing, not necasserily your save. Used to overwrite your save when you save the game. basically it's a temporary holding file
 
     public Button startButtonOne;
     public Button startButtonTwo;
@@ -31,7 +33,7 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -126,8 +128,10 @@ public class MenuManager : MonoBehaviour
         if (prompt.choice == 1)
         {
             saveFileOne.inUse = true;
+            
             brain.activeGame = saveFileOne;
             brain.playing = true;
+            SceneManager.LoadScene(brain.activeGame.scene, LoadSceneMode.Single);
         }
         prompt.selected = false;
         prompt.choice = 0;

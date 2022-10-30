@@ -13,3 +13,8 @@ MonoBehaviour:
   m_Name: SaveFileOne
   m_EditorClassIdentifier: 
   saveFileNum: 1
+  inUse: 0
+  scene: Office
+  currentDialogue: {fileID: 11400000, guid: 125f621f690bd1643a79574005f8091a, type: 2}
+  MrvN_Dialogue: {fileID: 11400000, guid: 682d406bd7b651045b4eeb9c212721d8, type: 2}
+  Sweeper_Dialogue: {fileID: 11400000, guid: b5fba5a35918c8c49bbffc2e3e952c38, type: 2}

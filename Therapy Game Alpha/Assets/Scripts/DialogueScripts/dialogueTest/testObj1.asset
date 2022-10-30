@@ -20,6 +20,4 @@ MonoBehaviour:
   - whats your name?
   character: {fileID: 0}
   responses: []
-  branches:
-  - {fileID: 0}
-  - {fileID: 0}
+  branches: []

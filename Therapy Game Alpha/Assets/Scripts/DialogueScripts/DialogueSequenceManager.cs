@@ -71,6 +71,7 @@ public class DialogueSequenceManager : MonoBehaviour
 
     public void ExitDialogue()
     {
+        
         dialogueBox.SetActive(false);
         dialogueEnabled = false;
     }

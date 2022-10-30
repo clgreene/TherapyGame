@@ -2423,7 +2423,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &962943574
 CanvasRenderer:
@@ -3797,7 +3797,6 @@ GameObject:
   - component: {fileID: 2073342599}
   - component: {fileID: 2073342598}
   - component: {fileID: 2073342601}
-  - component: {fileID: 2073342600}
   m_Layer: 0
   m_Name: GameManagers
   m_TagString: Untagged
@@ -3829,7 +3828,7 @@ MonoBehaviour:
   deleteButtonOne: {fileID: 128800128}
   deleteButtonTwo: {fileID: 66685740}
   deleteButtonThree: {fileID: 1987458829}
-  brain: {fileID: 2073342600}
+  brain: {fileID: 11400000, guid: a8ec64eff61b8f74dac304dbd4decf6e, type: 2}
   popupCanvas: {fileID: 870100756}
   prompt: {fileID: 870100758}
 --- !u!4 &2073342599
@@ -3846,20 +3845,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2073342600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073342597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9c98a10e4d9e4448a0be5bdd1a790e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playing: 0
-  activeGame: {fileID: 0}
 --- !u!114 &2073342601
 MonoBehaviour:
   m_ObjectHideFlags: 0

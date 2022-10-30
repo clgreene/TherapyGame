@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameBrain : MonoBehaviour
+
+[CreateAssetMenu]
+public class GameBrain : ScriptableObject
 {
 
     public bool playing;
