@@ -23,9 +23,7 @@ public class DialogueSequenceManager : MonoBehaviour
     public bool dialogueEnabled;
 
     //defined in local functions by dialogueSequenceObject
-    public Button responseOne;
-    public Button responseTwo;
-    public Button responseThree;
+    public Button[] responses;
 
     //character Names to reference for overriding the currentstatus on dialogue end or response given functions
     public string charName;
@@ -56,7 +54,6 @@ public class DialogueSequenceManager : MonoBehaviour
 
         else
         {
-            Debug.Log("We've made it to the else statement.");
             if(currentSequence.responses.Length > 0)
             {
                 Respond();
@@ -71,8 +68,17 @@ public class DialogueSequenceManager : MonoBehaviour
 
     public void Respond()
     {
+        for (int i = 0; i < responses.Length; i++)
+        {
+            responses[i].GetComponent<Image>().enabled = false;
+        }
         //if statement for single or options on response
-        responseOne.GetComponent<Text>().text = currentSequence.responses[1];
+        for (int i = 0; i < currentSequence.responses.Length; i++)
+        {
+            responses[i].GetComponent<Image>().enabled = true;
+            responses[i].GetComponentInChildren<Text>().text = currentSequence.responses[i];
+        }
+        
         responseOptions.SetActive(true);
     }
 

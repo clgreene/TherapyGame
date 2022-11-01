@@ -1179,9 +1179,10 @@ MonoBehaviour:
   displayedDialogue: {fileID: 1433667878}
   currentLine: 0
   dialogueEnabled: 0
-  responseOne: {fileID: 0}
-  responseTwo: {fileID: 0}
-  responseThree: {fileID: 0}
+  responses:
+  - {fileID: 689917400}
+  - {fileID: 1976612512}
+  - {fileID: 335915452}
   charName: 
 --- !u!4 &1502817879
 Transform:

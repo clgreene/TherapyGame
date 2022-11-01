@@ -46,7 +46,8 @@ MonoBehaviour:
     work load down until you get the hang of things here. '
   - 'Now, if you are ready we''ll send in your first patient. '
   character: {fileID: 0}
-  responses: []
+  responses:
+  - This is question one
   branches:
   - {fileID: 0}
   nextCharacter: Nova
