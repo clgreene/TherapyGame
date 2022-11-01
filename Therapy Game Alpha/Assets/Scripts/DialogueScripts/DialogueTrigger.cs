@@ -19,7 +19,7 @@ public class DialogueTrigger : MonoBehaviour
         switch (charName)
         {
             case "Synthetic":
-                triggeredSequence = currentStatus.SyntheticDialogue;
+                triggeredSequence = currentStatus.Synthetic_Dialogue;
                 break;
             case "Nova":
                 triggeredSequence = currentStatus.Nova_Dialogue;
@@ -42,7 +42,7 @@ public class DialogueTrigger : MonoBehaviour
         switch (charName)
         {
             case "Synthetic":
-                triggeredSequence = currentStatus.SyntheticDialogue;
+                triggeredSequence = currentStatus.Synthetic_Dialogue;
                 break;
             case "Nova":
                 triggeredSequence = currentStatus.Nova_Dialogue;

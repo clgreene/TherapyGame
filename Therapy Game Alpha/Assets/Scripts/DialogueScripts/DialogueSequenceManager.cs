@@ -98,6 +98,10 @@ public class DialogueSequenceManager : MonoBehaviour
                             case "MrvN":
                                 currentStatus.MrvN_Dialogue = currentSequence.branches[i];
                                 break;
+                            case "Synthetic":
+                                currentStatus.Synthetic_Dialogue = currentSequence.branches[i];
+                                break;
+
                         }
 
                     }

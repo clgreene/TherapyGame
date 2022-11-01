@@ -307,8 +307,8 @@ public class MenuManager : MonoBehaviour
     void setCurrentStatus()
     {
         currentStatus.scene = saveFileOne.scene;
-        currentStatus.currentDialogue = saveFileOne.currentDialogue;
-        currentStatus.SyntheticDialogue = saveFileOne.SyntheticDialogue;
+        currentStatus.current_Dialogue = saveFileOne.current_Dialogue;
+        currentStatus.Synthetic_Dialogue = saveFileOne.Synthetic_Dialogue;
         currentStatus.MrvN_Dialogue = saveFileOne.MrvN_Dialogue;
         currentStatus.Sweeper_Dialogue = saveFileOne.Sweeper_Dialogue;
         currentStatus.Nova_Dialogue = saveFileOne.Nova_Dialogue;
