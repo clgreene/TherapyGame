@@ -145,6 +145,7 @@ public class DialogueSequenceManager : MonoBehaviour
                     {
                         switch (currentSequence.branches[i].charName)
                         {
+                            
                             case "Nova":
                                 currentStatus.Nova_Dialogue = currentSequence.branches[i];
                                 break;
