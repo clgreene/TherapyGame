@@ -4,6 +4,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu]
+[System.Serializable]
 public class SaveFile : ScriptableObject
 {
     public int saveFileNum;

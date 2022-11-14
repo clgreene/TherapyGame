@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c317b8a3f1ea614e943b98740da5889, type: 3}
+  m_Name: Synthetic_2
+  m_EditorClassIdentifier: 
+  charName: Synthetic
+  sequence:
+  - 'Welcome to your office. We''ve seen fit to outfit this space with your utmost
+    safety in mind. '
+  - 'Are these synthetics dangerous? '
+  - 'Your patients willingly submitted themselves to be kept under guard here until
+    their deviations can be reversed. That being said, we cannot guess what some
+    of their deviations may lead them to do. '
+  - 'During your sessions the deviants will remain behind this glass, where you can
+    freely talk to and observe them. '
+  - 'Your terminal here will provide you with details as to the patients condition.
+    Through this terminal you may also log notes during your sessions that seem prudent. '
+  - 'We run daily diagnostic checks on each deviant. Each session you will be able
+    to see updated reports on the level of deviation they have exhibited since your
+    last session. '
+  - 'Remember that the goal is to bring that deviation down to zero. '
+  - 'Also remember, your work here cannot be discussed outside of this building.
+    The United Synthetic Federation considers it a matter of national security. '
+  - 'So if I disclose what''s going on here to anyone, what happens? '
+  - 'You will be terminated. '
+  - 'Like, in the ''lose my job'' way or in the ''lose my life'' way? '
+  - 'Both. '
+  - '(Got it, don''t make the robots angry) I''ll keep my mouth shut. '
+  - 'Excellent. Then I think today we will have you meet with only one of the deviants
+    here, so you can get your bearings. '
+  - 'You can use the terminal to call them in whenever you''re ready. We''ll leave
+    you to it. '
+  character: {fileID: 0}
+  responses: []
+  branches: []
+  nextCharacter: 

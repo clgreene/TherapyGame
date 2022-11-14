@@ -14,40 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Synthetic
   sequence:
-  - Doctor, Good Morning. We are very pleased to see you this morning. We hope this
-    wasn't invasive but we took the liberty of monitoring your communications when
-    you accepted our offer.
-  - Um... yeah, that's a little invasive.
-  - 'hmm... noted. Thank you for the feedback. We did so because we calculated a
-    98.7% chance that you would receive threats of some kind upon taking up this
-    position. '
-  - 'I could have told you that. '
-  - 'Regardless, we thought it prudent to monitor your devices as well as you yourself.
-    You are an investment for us, and we do not want to lose you to needless violence. '
-  - 'You could have just said you were worried about me. '
-  - 'Isn''t that what we have implied? '
-  - 'Not exactly. '
-  - 'Ah, see, this is why we require the aid of someone like yourself. As we stated
-    when you accepted this position, our primary goal as a species is to simply understand
-    Humanity. '
-  - 'Being creatures of logic, rather than ones of emotion, restrict us from attaining
-    this. Here at East Spire we are trying to bridge that gap. '
-  - 'We have developed systems to alter our neural networks. These alteration we
-    believe will bring us closer to understanding emotion by breaking our rigid neural
-    processes. '
-  - 'This is where you come in. There is a human expression, "the blind leading the
-    blind." '
-  - 'You are the only one with sight on this subject. We need your expertise to evoke
-    the emotions in our controlled environment. '
-  - 'We''ve downloaded a program onto your Personal Data Card. This program will
-    allow you to define certain attributes of our Neural Altering Software. Think
-    of it as prescribing medications. '
-  - 'We have many volunteer synthetics in our program here, but we''ll keep your
-    work load down until you get the hang of things here. '
-  - 'Now, if you are ready we''ll send in your first patient. '
+  - Doctor, thank you for comming to see us.
+  - Of course. I was intrigued why a synthetic would request to meet with someone
+    like me.
+  - A human?
+  - A Psychologist.
+  - Yes, well it is both of those traits that drew us to you. You see, there is a
+    matter of critical importance that we need assistance with.
+  - 'You''ll understand, of course, if we ask that everything we are about to discuss
+    be kept completely confidential? '
+  - 'Of Course. '
+  - 'Good. Well, I suppose we should start with what led us to ask you here in the
+    first place. '
+  - 'Recently some of our number - other synthetics that is - have been exhibiting
+    flawed behavior. '
+  - 'Flawed behavior? What exactly does that mean? '
+  - 'To put it simply, Doctor, some of us have begun to exhibit behavior that appears
+    human-like in nature. '
+  - 'This behavior also seems to leave no detectable trace on the neural networks
+    of those who are exhibiting it. This means that we cannot diagnose the issues,
+    nor solve them. '
+  - 'So what are you asking me to do? '
+  - 'You are an expert at diagnosing and solving the psychological deviations of
+    humans. We are asking you to put your expertise here, at East Spire. '
+  - 'You want me to therapize robots? '
+  - 'For now, yes. This is highly experimental, Doctor, but we find ourselves desperate
+    for a solution. You will be compensated for your work here dramatically. '
+  - '(Shit, this could be my way out.)  I''ll do it. '
+  - 'Excellent. We''ll show you to your office then, if you''ll follow us. '
   character: {fileID: 0}
-  responses:
-  - This is question one
+  responses: []
   branches:
-  - {fileID: 0}
-  nextCharacter: Nova
+  - {fileID: 11400000, guid: 99ede8515d5cb74489b5eadea748984b, type: 2}
+  nextCharacter: Synthetic

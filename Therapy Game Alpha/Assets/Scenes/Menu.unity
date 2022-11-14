@@ -3797,6 +3797,7 @@ GameObject:
   - component: {fileID: 2073342599}
   - component: {fileID: 2073342598}
   - component: {fileID: 2073342601}
+  - component: {fileID: 2073342600}
   m_Layer: 0
   m_Name: GameManagers
   m_TagString: Untagged
@@ -3819,7 +3820,7 @@ MonoBehaviour:
   saveFileOne: {fileID: 11400000, guid: a6ce5b39901b05f41ad34789173a9b85, type: 2}
   saveFileTwo: {fileID: 11400000, guid: 0f0e6d0890feffa4fbfa5e2f7a129d06, type: 2}
   saveFileThree: {fileID: 11400000, guid: a5f3a1a54ef0cdc4f816c543ca868117, type: 2}
-  currentStatus: {fileID: 11400000, guid: 51d2cb0ba82ba324da1edb6980bc2d59, type: 2}
+  currentStatus: {fileID: 0}
   startButtonOne: {fileID: 74315486}
   startButtonTwo: {fileID: 287778370}
   startButtonThree: {fileID: 2074235285}
@@ -3846,6 +3847,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2073342600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073342597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc2f8c2775d6d241b1e13ffe0b820da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveOne: {fileID: 11400000, guid: a6ce5b39901b05f41ad34789173a9b85, type: 2}
+  saveTwo: {fileID: 11400000, guid: 0f0e6d0890feffa4fbfa5e2f7a129d06, type: 2}
+  saveThree: {fileID: 11400000, guid: a5f3a1a54ef0cdc4f816c543ca868117, type: 2}
+  saveDefault: {fileID: 0}
 --- !u!114 &2073342601
 MonoBehaviour:
   m_ObjectHideFlags: 0
