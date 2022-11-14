@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 
 [CreateAssetMenu]
@@ -9,7 +10,18 @@ public class SaveFile : ScriptableObject
 {
     public int saveFileNum;
     public bool inUse;
-    public string scene;
+
+    public enum Scene
+    {
+        menu,
+        office,
+        boss,
+        apartment
+    }
+
+
+    public Scene scene = new Scene();
+
     public DialogueSequenceObject current_Dialogue;
     public DialogueSequenceObject Synthetic_Dialogue;
     public DialogueSequenceObject MrvN_Dialogue;

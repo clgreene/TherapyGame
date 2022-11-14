@@ -6,20 +6,15 @@ using UnityEngine;
 public class SaveSystem : MonoBehaviour
 {
 
-    public SaveFile saveOne;
-    public SaveFile saveTwo;
-    public SaveFile saveThree;
-
     public SaveFile currentStatus;
+    public SaveFile defaultStatus;
 
     public SaveFile saveDefault;
 
     // Start is called before the first frame update
     void Start()
     {
-        string json = JsonUtility.ToJson(saveOne); //takes so and makes it a json text string
-        Debug.Log(json);
-        JsonUtility.FromJsonOverwrite(json, saveThree);
+
     }
 
     public void saveGameOne()
@@ -68,5 +63,13 @@ public class SaveSystem : MonoBehaviour
     public void deleteSaveThree()
     {
 
+    }
+
+
+    //delete function before final build - merely for setup purposes
+    public void saveDefaultGame()
+    {
+        string defaultSaveJson = JsonUtility.ToJson(defaultStatus);
+        File.WriteAllText(Application.dataPath + "/saveFileOne.json", defaultSaveJson);
     }
 }

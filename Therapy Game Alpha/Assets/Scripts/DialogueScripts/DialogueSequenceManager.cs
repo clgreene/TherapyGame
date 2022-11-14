@@ -84,7 +84,7 @@ public class DialogueSequenceManager : MonoBehaviour
     public void ExitDialogue()
     {
         //figuring out who we are talking to, then determining whose dialogue we need to update;
-        switch (currentSequence.charName)
+        switch (currentSequence.charName.ToString())
         {
             case "Synthetic": //are we talking to Synthetic right now?
                 Debug.Log("got to the switch");
@@ -93,7 +93,7 @@ public class DialogueSequenceManager : MonoBehaviour
                 {
                     for (int i = 1; i < currentSequence.branches.Length; i++)//okay then, lets figure out whose branches we are updating.
                     {
-                        switch (currentSequence.branches[i].charName)
+                        switch (currentSequence.branches[i].charName.ToString())
                         {
                             case "Nova"://are we updating Novas? 
                                 currentStatus.Nova_Dialogue = currentSequence.branches[i]; //set novas next dialogue to whatever this branch says to
@@ -119,7 +119,7 @@ public class DialogueSequenceManager : MonoBehaviour
                 {
                     for (int i = 1; i < currentSequence.branches.Length; i++)//okay then, lets figure out whose branches we are updating.
                     {
-                        switch (currentSequence.branches[i].charName)
+                        switch (currentSequence.branches[i].charName.ToString())
                         {
                             case "Nova"://are we updating Novas? 
                                 currentStatus.Nova_Dialogue = currentSequence.branches[i]; //set novas next dialogue to whatever this branch says to
@@ -146,7 +146,7 @@ public class DialogueSequenceManager : MonoBehaviour
                 {
                     for (int i = 1; i < currentSequence.branches.Length; i++)
                     {
-                        switch (currentSequence.branches[i].charName)
+                        switch (currentSequence.branches[i].charName.ToString())
                         {
                             case "Nova":
                                 currentStatus.Nova_Dialogue = currentSequence.branches[i];
@@ -169,7 +169,7 @@ public class DialogueSequenceManager : MonoBehaviour
                 {
                     for (int i = 1; i < currentSequence.branches.Length; i++)
                     {
-                        switch (currentSequence.branches[i].charName)
+                        switch (currentSequence.branches[i].charName.ToString())
                         {
                             
                             case "Nova":
@@ -187,7 +187,7 @@ public class DialogueSequenceManager : MonoBehaviour
                 }
                 break;
         }
-        currentTrigger.charName = currentSequence.nextCharacter;
+        currentTrigger.charName = currentSequence.nextCharacter.ToString();
         currentLine = 0;
         dialogueBox.SetActive(false);
         dialogueEnabled = false;

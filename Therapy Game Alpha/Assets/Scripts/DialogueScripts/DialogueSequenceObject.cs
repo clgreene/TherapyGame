@@ -6,7 +6,16 @@ using UnityEngine;
 
 public class DialogueSequenceObject : ScriptableObject
 {
-    public string charName;
+    public enum Character
+    {
+        synthetic,
+        sweeper,
+        ash,
+        burk,
+        mrvn
+    }
+    
+    public Character charName;
 
     public string[] sequence;
 
@@ -16,7 +25,7 @@ public class DialogueSequenceObject : ScriptableObject
 
     public DialogueSequenceObject[] branches;
 
-    public string nextCharacter;
+    public Character nextCharacter;
 
     // Start is called before the first frame update
     void Start()
