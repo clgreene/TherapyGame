@@ -26,12 +26,13 @@ public class SaveSystem : MonoBehaviour
     {
         string saveOneJson = JsonUtility.ToJson(currentStatus);
         File.WriteAllText(Application.dataPath + "/saveFileOne.json", saveOneJson);
-        Debug.Log("Saved?");
     }
 
     public void loadSaveOne()
     {
+        string saveOneJson = File.ReadAllText(Application.dataPath + "/saveFileOne.json");
 
+        JsonUtility.FromJsonOverwrite(saveOneJson, currentStatus);
     }
 
     public void deleteSaveOne()

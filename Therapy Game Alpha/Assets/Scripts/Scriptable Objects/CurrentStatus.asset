@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saveFileNum: 0
   inUse: 0
-  scene: Office
+  scene: I shouldnt say this
   current_Dialogue: {fileID: 0}
   Synthetic_Dialogue: {fileID: 0}
   MrvN_Dialogue: {fileID: 0}
