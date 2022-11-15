@@ -12,38 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c317b8a3f1ea614e943b98740da5889, type: 3}
   m_Name: Synthetic_1
   m_EditorClassIdentifier: 
-  charName: 0
   sequence:
-  - Doctor, thank you for comming to see us.
-  - Of course. I was intrigued why a synthetic would request to meet with someone
-    like me.
-  - A human?
-  - A Psychologist.
-  - Yes, well it is both of those traits that drew us to you. You see, there is a
-    matter of critical importance that we need assistance with.
-  - 'You''ll understand, of course, if we ask that everything we are about to discuss
-    be kept completely confidential? '
-  - 'Of Course. '
-  - 'Good. Well, I suppose we should start with what led us to ask you here in the
-    first place. '
-  - 'Recently some of our number - other synthetics that is - have been exhibiting
-    flawed behavior. '
-  - 'Flawed behavior? What exactly does that mean? '
-  - 'To put it simply, Doctor, some of us have begun to exhibit behavior that appears
-    human-like in nature. '
-  - 'This behavior also seems to leave no detectable trace on the neural networks
-    of those who are exhibiting it. This means that we cannot diagnose the issues,
-    nor solve them. '
-  - 'So what are you asking me to do? '
-  - 'You are an expert at diagnosing and solving the psychological deviations of
-    humans. We are asking you to put your expertise here, at East Spire. '
-  - 'You want me to therapize robots? '
-  - 'For now, yes. This is highly experimental, Doctor, but we find ourselves desperate
-    for a solution. You will be compensated for your work here dramatically. '
-  - '(Shit, this could be my way out.)  I''ll do it. '
-  - 'Excellent. We''ll show you to your office then, if you''ll follow us. '
-  character: {fileID: 0}
+  - charName: 0
+    dialogueLine: Hello
+    portrait: {fileID: 0}
+    scene: 0
+  - charName: 0
+    dialogueLine: Hi
+    portrait: {fileID: 0}
+    scene: 0
   responses: []
-  branches:
-  - {fileID: 11400000, guid: 99ede8515d5cb74489b5eadea748984b, type: 2}
-  nextCharacter: 3
+  endEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000}
+        m_TargetAssemblyTypeName: DialogueSequenceObject, Assembly-CSharp
+        m_MethodName: setCharDialoguePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 99ede8515d5cb74489b5eadea748984b, type: 2}
+          m_ObjectArgumentAssemblyTypeName: DialogueSequenceObject, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

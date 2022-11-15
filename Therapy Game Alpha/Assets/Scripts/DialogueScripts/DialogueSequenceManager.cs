@@ -33,10 +33,10 @@ public class DialogueSequenceManager : MonoBehaviour
     //engaged by the dialogue trigger
     public void StartDialogue()
     {
-        dialogueBox.SetActive(true);
-        currentLine = 0;
-        dialogueEnabled = true;
-        displayedDialogue.text = currentSequence.sequence[currentLine].dialogueLine;
+        dialogueBox.SetActive(true); //dialogue ui box turned on
+        currentLine = 0; //set our starting position for the dialogue lines
+        dialogueEnabled = true; //setting dialogue bool for other classes to reference
+        displayedDialogue.text = currentSequence.sequence[currentLine].dialogueLine; //setting text of the dialogue box to our first line of dialogue
 
     }
 
@@ -51,12 +51,12 @@ public class DialogueSequenceManager : MonoBehaviour
 
         else
         {
-            if(currentSequence.responses.Length > 0)
+            if(currentSequence.responses.Length > 0) // if there are response options for this sequence, run the response function
             {
                 Debug.Log("Respond");
                 Respond();
             }
-            else
+            else //otherwise, we'll just exit the dialogue encounter
             {
                 Debug.Log("Exit");
                 ExitDialogue();
@@ -72,10 +72,11 @@ public class DialogueSequenceManager : MonoBehaviour
 
     public void ExitDialogue()
     {
-        
+
         currentLine = 0;
         dialogueBox.SetActive(false);
         dialogueEnabled = false;
+        currentSequence.endEvent.Invoke();
     }
 
 

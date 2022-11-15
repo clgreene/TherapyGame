@@ -12,11 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c317b8a3f1ea614e943b98740da5889, type: 3}
   m_Name: MrvN_1
   m_EditorClassIdentifier: 
-  charName: MrvN
   sequence:
-  - My Name is MrvN
-  character: {fileID: 0}
+  - charName: 4
+    dialogueLine: Bye
+    portrait: {fileID: 0}
+    scene: 0
+  - charName: 3
+    dialogueLine: Good bye
+    portrait: {fileID: 0}
+    scene: 0
   responses: []
-  branches:
-  - {fileID: 11400000}
-  nextCharacter: Sweeper
+  endEvent:
+    m_PersistentCalls:
+      m_Calls: []

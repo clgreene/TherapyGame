@@ -18,8 +18,17 @@ public class SequenceClass
         mrvn
     }
 
+    public enum Scenes
+    {
+        office,
+        apartment,
+        synthetic,
+        bar
+    }
+
     public Character charName;
     public string dialogueLine;
     public GameObject portrait;
+    public Scenes scene;
 
 }
