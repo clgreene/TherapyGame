@@ -9,7 +9,6 @@ public class SaveSystem : MonoBehaviour
     public SaveFile currentStatus;
     public SaveFile defaultStatus;
 
-    public SaveFile saveDefault;
 
     // Start is called before the first frame update
     void Start()

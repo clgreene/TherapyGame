@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0510b8c36ddc8d34e91e5392b63d72e7, type: 3}
   m_Name: CurrentStatus
   m_EditorClassIdentifier: 
-  saveFileNum: 0
+  saveFileNum: 6
   inUse: 0
-  scene: I shouldnt say this
+  scene: 0
   current_Dialogue: {fileID: 0}
   Synthetic_Dialogue: {fileID: 0}
   MrvN_Dialogue: {fileID: 0}

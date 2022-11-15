@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c317b8a3f1ea614e943b98740da5889, type: 3}
   m_Name: Synthetic_1
   m_EditorClassIdentifier: 
-  charName: Synthetic
+  charName: 0
   sequence:
   - Doctor, thank you for comming to see us.
   - Of course. I was intrigued why a synthetic would request to meet with someone
@@ -46,4 +46,4 @@ MonoBehaviour:
   responses: []
   branches:
   - {fileID: 11400000, guid: 99ede8515d5cb74489b5eadea748984b, type: 2}
-  nextCharacter: Synthetic
+  nextCharacter: 3

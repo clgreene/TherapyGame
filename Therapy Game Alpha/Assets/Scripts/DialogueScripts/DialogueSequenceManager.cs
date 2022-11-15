@@ -36,7 +36,7 @@ public class DialogueSequenceManager : MonoBehaviour
         dialogueBox.SetActive(true);
         currentLine = 0;
         dialogueEnabled = true;
-        displayedDialogue.text = currentSequence.sequence[currentLine];
+        displayedDialogue.text = currentSequence.sequence[currentLine].dialogueLine;
 
     }
 
@@ -46,7 +46,7 @@ public class DialogueSequenceManager : MonoBehaviour
         if(currentSequence.sequence.Length > currentLine + 1)
         {
             currentLine += 1;
-            displayedDialogue.text = currentSequence.sequence[currentLine];
+            displayedDialogue.text = currentSequence.sequence[currentLine].dialogueLine;
         }
 
         else
@@ -83,111 +83,7 @@ public class DialogueSequenceManager : MonoBehaviour
 
     public void ExitDialogue()
     {
-        //figuring out who we are talking to, then determining whose dialogue we need to update;
-        switch (currentSequence.charName.ToString())
-        {
-            case "Synthetic": //are we talking to Synthetic right now?
-                Debug.Log("got to the switch");
-                currentStatus.Synthetic_Dialogue = currentSequence.branches[0]; //Okay then, update Novas next dialogue they will load.
-                if (currentSequence.branches.Length > 1)//are there more branches to update?
-                {
-                    for (int i = 1; i < currentSequence.branches.Length; i++)//okay then, lets figure out whose branches we are updating.
-                    {
-                        switch (currentSequence.branches[i].charName.ToString())
-                        {
-                            case "Nova"://are we updating Novas? 
-                                currentStatus.Nova_Dialogue = currentSequence.branches[i]; //set novas next dialogue to whatever this branch says to
-                                break;
-                            case "Sweeper"://are we updating Sweepers?
-                                currentStatus.Sweeper_Dialogue = currentSequence.branches[i]; //set sweepers next dial to whatever this branch says to
-                                break;
-                            case "MrvN":
-                                currentStatus.MrvN_Dialogue = currentSequence.branches[i];
-                                break;
-                            case "Synthetic":
-                                currentStatus.Synthetic_Dialogue = currentSequence.branches[i];
-                                break;
-
-                        }
-
-                    }
-                }
-                break;
-            case "Nova": //are we talking to Nova right now?
-                currentStatus.Nova_Dialogue = currentSequence.branches[0]; //Okay then, update Novas next dialogue they will load.
-                if (currentSequence.branches.Length > 1)//are there more branches to update?
-                {
-                    for (int i = 1; i < currentSequence.branches.Length; i++)//okay then, lets figure out whose branches we are updating.
-                    {
-                        switch (currentSequence.branches[i].charName.ToString())
-                        {
-                            case "Nova"://are we updating Novas? 
-                                currentStatus.Nova_Dialogue = currentSequence.branches[i]; //set novas next dialogue to whatever this branch says to
-                                break;
-                            case "Sweeper"://are we updating Sweepers?
-                                currentStatus.Sweeper_Dialogue = currentSequence.branches[i]; //set sweepers next dial to whatever this branch says to
-                                break;
-                            case "MrvN":
-                                currentStatus.MrvN_Dialogue = currentSequence.branches[i];
-                                break;
-                            case "Synthetic":
-                                currentStatus.Synthetic_Dialogue = currentSequence.branches[i];
-                                break;
-
-                        }
-
-                    }
-                }
-                break;
-
-            case "Sweeper": 
-                currentStatus.Sweeper_Dialogue = currentSequence.branches[0];
-                if (currentSequence.branches.Length > 1)
-                {
-                    for (int i = 1; i < currentSequence.branches.Length; i++)
-                    {
-                        switch (currentSequence.branches[i].charName.ToString())
-                        {
-                            case "Nova":
-                                currentStatus.Nova_Dialogue = currentSequence.branches[i];
-                                break;
-                            case "Sweeper":
-                                currentStatus.Sweeper_Dialogue = currentSequence.branches[i];
-                                break;
-                            case "MrvN":
-                                currentStatus.MrvN_Dialogue = currentSequence.branches[i];
-                                break;
-                        }
-
-                    }
-                }
-                break;
-
-            case "MrvN":
-                currentStatus.MrvN_Dialogue = currentSequence.branches[0];
-                if (currentSequence.branches.Length > 1)
-                {
-                    for (int i = 1; i < currentSequence.branches.Length; i++)
-                    {
-                        switch (currentSequence.branches[i].charName.ToString())
-                        {
-                            
-                            case "Nova":
-                                currentStatus.Nova_Dialogue = currentSequence.branches[i];
-                                break;
-                            case "Sweeper":
-                                currentStatus.Sweeper_Dialogue = currentSequence.branches[i];
-                                break;
-                            case "MrvN":
-                                currentStatus.MrvN_Dialogue = currentSequence.branches[i];
-                                break;
-                        }
-
-                    }
-                }
-                break;
-        }
-        currentTrigger.charName = currentSequence.nextCharacter.ToString();
+        
         currentLine = 0;
         dialogueBox.SetActive(false);
         dialogueEnabled = false;
