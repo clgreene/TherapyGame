@@ -6,6 +6,8 @@ using UnityEngine;
 [Serializable]
 public class SequenceClass
 {
+    //class for who is talking, what they are saying, and what they look like while they're saying it
+
     //initializing enums
     public enum Character
     {

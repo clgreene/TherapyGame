@@ -67,18 +67,7 @@ public class DialogueSequenceManager : MonoBehaviour
 
     public void Respond()
     {
-        for (int i = 0; i < responses.Length; i++)
-        {
-            responses[i].GetComponent<Image>().enabled = false;
-        }
-        //if statement for single or options on response
-        for (int i = 0; i < currentSequence.responses.Length; i++)
-        {
-            responses[i].GetComponent<Image>().enabled = true;
-            responses[i].GetComponentInChildren<Text>().text = currentSequence.responses[i];
-        }
-        
-        responseOptions.SetActive(true);
+
     }
 
     public void ExitDialogue()
