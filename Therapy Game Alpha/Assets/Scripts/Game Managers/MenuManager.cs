@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.IO;
 
 public class MenuManager : MonoBehaviour
 {
@@ -36,10 +37,29 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        if (File.Exists(Application.dataPath + "/saveFileOne.json"))
+        {
+            startButtonOne.GetComponentInChildren<Text>().text = "Begin";
+        }
+        else startButtonOne.GetComponentInChildren<Text>().text = "Load";
+
+        if (Application.dataPath + "/saveFileTwo.json" == null)
+        {
+            startButtonTwo.GetComponentInChildren<Text>().text = "Begin";
+        }
+        else startButtonTwo.GetComponentInChildren<Text>().text = "Load";
+
+        if (Application.dataPath + "/saveFileThree.json" == null)
+        {
+            startButtonThree.GetComponentInChildren<Text>().text = "Begin";
+        }
+        else startButtonThree.GetComponentInChildren<Text>().text = "Load";
 
     }
 
-
+    //Save system taking care of this now... delete once it's been thouroughly tested...
+    /*
     // FILE ONE OPTIONS //
 
     public void loadSaveOne()
@@ -82,7 +102,7 @@ public class MenuManager : MonoBehaviour
         {
             //load in the default json savefile into the currentStatus S.O.
             //pull current scene, character, etc from currentStatus and load them.
-            SceneManager.LoadScene(currentStatus.scene.ToString(), LoadSceneMode.Single);
+            SceneManager.LoadScene(currentStatus.current_Dialogue.sequence[0].scene.ToString(), LoadSceneMode.Single);
         }
         prompt.selected = false;
         prompt.choice = 0;
@@ -116,6 +136,7 @@ public class MenuManager : MonoBehaviour
     {
         
     }
+    */
 }
 
 

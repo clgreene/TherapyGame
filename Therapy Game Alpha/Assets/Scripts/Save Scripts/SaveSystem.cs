@@ -10,10 +10,18 @@ public class SaveSystem : MonoBehaviour
     public SaveFile defaultStatus;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
 
+    }
+
+
+    public void startSaveOne()
+    {
+        string saveOneJson = JsonUtility.ToJson(defaultStatus);
+        File.WriteAllText(Application.dataPath + "/saveFileOne.json", saveOneJson);
     }
 
     public void saveGameOne()
@@ -31,7 +39,7 @@ public class SaveSystem : MonoBehaviour
 
     public void deleteSaveOne()
     {
-
+        File.Delete(Application.dataPath + "/saveFileOne.json");
     }
 
     public void saveGameTwo()

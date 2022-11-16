@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saveFileNum: 0
   inUse: 0
-  scene: 
-  currentDialogue: {fileID: 0}
-  MrvN_Dialogue: {fileID: 0}
-  Sweeper_Dialogue: {fileID: 0}
-  Nova_Dialogue: {fileID: 0}
+  scene: 1
+  current_Dialogue: {fileID: 11400000, guid: 3464cfcf76c108b40853718cd311f166, type: 2}
+  Synthetic_Dialogue: {fileID: 11400000, guid: 3464cfcf76c108b40853718cd311f166, type: 2}
+  MrvN_Dialogue: {fileID: 11400000, guid: 0c5ebececd9179d4e83ac0e58f8ef4e7, type: 2}
+  Sweeper_Dialogue: {fileID: 11400000, guid: 3cd4ce3dca893164cbb1ab1634b71f6d, type: 2}
+  Nova_Dialogue: {fileID: 11400000, guid: 7839d4d37371a8d48be672dc0fbff3c4, type: 2}
+  Berk_Dialogue: {fileID: 0}
+  Ash_Dialogue: {fileID: 0}
