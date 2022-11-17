@@ -40,21 +40,21 @@ public class MenuManager : MonoBehaviour
         
         if (File.Exists(Application.dataPath + "/saveFileOne.json"))
         {
-            startButtonOne.GetComponentInChildren<Text>().text = "Begin";
+            startButtonOne.GetComponentInChildren<Text>().text = "LOAD";
         }
-        else startButtonOne.GetComponentInChildren<Text>().text = "Load";
+        else startButtonOne.GetComponentInChildren<Text>().text = "BEGIN";
 
         if (Application.dataPath + "/saveFileTwo.json" == null)
         {
-            startButtonTwo.GetComponentInChildren<Text>().text = "Begin";
+            startButtonTwo.GetComponentInChildren<Text>().text = "LOAD";
         }
-        else startButtonTwo.GetComponentInChildren<Text>().text = "Load";
+        else startButtonTwo.GetComponentInChildren<Text>().text = "BEGIN";
 
         if (Application.dataPath + "/saveFileThree.json" == null)
         {
-            startButtonThree.GetComponentInChildren<Text>().text = "Begin";
+            startButtonThree.GetComponentInChildren<Text>().text = "LOAD";
         }
-        else startButtonThree.GetComponentInChildren<Text>().text = "Load";
+        else startButtonThree.GetComponentInChildren<Text>().text = "BEGIN";
 
     }
 
