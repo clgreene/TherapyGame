@@ -41,6 +41,7 @@ public class MenuManager : MonoBehaviour
         if (File.Exists(Application.dataPath + "/saveFileOne.json"))
         {
             startButtonOne.GetComponentInChildren<Text>().text = "LOAD";
+
         }
         else startButtonOne.GetComponentInChildren<Text>().text = "BEGIN";
 
