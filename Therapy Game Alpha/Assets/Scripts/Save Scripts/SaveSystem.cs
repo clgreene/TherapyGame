@@ -40,20 +40,12 @@ public class SaveSystem : MonoBehaviour
 
         StartCoroutine(confirm());
 
-
-        
     }
 
     public void saveGameOne()
     {
         string saveOneJson = JsonUtility.ToJson(currentStatus);
         File.WriteAllText(Application.dataPath + "/saveFileOne.json", saveOneJson);
-    }
-
-    public void loadSaveOne()
-    {
-        string saveOneJson = File.ReadAllText(Application.dataPath + "/saveFileOne.json");
-        JsonUtility.FromJsonOverwrite(saveOneJson, currentStatus);
     }
 
     public void deleteSaveOne()
@@ -66,22 +58,12 @@ public class SaveSystem : MonoBehaviour
 
     }
 
-    public void loadSaveTwo()
-    {
-
-    }
-
     public void deleteSaveTwo()
     {
 
     }
 
     public void saveGameThree()
-    {
-
-    }
-
-    public void loadSaveThree()
     {
 
     }
@@ -97,7 +79,7 @@ public class SaveSystem : MonoBehaviour
         while (selected == false)
         {
             yield return null;
-        }
+        }//waiting for selection to be made on confirm screen.
 
         yield return new WaitForSeconds(0.1f); //buffer to establish choice so we don't overlap a case being run before a choice is registered
 
