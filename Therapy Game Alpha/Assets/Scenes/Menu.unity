@@ -2409,7 +2409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStatus: {fileID: 11400000, guid: 51d2cb0ba82ba324da1edb6980bc2d59, type: 2}
-  defaultStatus: {fileID: 0}
+  defaultStatus: {fileID: 11400000, guid: 720165e1bcfd0d64b827c37dd9955668, type: 2}
   mainScreen: {fileID: 872438254}
   confirmScreen: {fileID: 1797816720}
   selected: 0

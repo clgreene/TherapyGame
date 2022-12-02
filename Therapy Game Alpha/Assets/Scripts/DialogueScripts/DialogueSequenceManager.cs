@@ -9,30 +9,37 @@ public class DialogueSequenceManager : MonoBehaviour
     public SaveFile currentStatus;
 
     //set by DialogueTrigger
+    [HideInInspector]
     public DialogueSequenceObject currentSequence;
+    [HideInInspector]
     public DialogueTrigger currentTrigger;
 
 
     //set in engine
     public GameObject dialogueBox;
     public GameObject responseOptions;
+    public GameObject continuePrompt;
     public Text displayedDialogue;
 
     //set in local functions
+    //[HideInInspector]
     public int currentLine;
+    //[HideInInspector]
     public bool dialogueEnabled;
 
     //defined in local functions by dialogueSequenceObject
+    [HideInInspector]
     public Button[] responses;
 
     void Start()
     {
-        dialogueEnabled = false;
+        currentSequence = currentStatus.current_Dialogue;
     }
 
     //engaged by the dialogue trigger
     public void StartDialogue()
     {
+        Debug.Log("Started in the manager");
         dialogueBox.SetActive(true); //dialogue ui box turned on
         currentLine = 0; //set our starting position for the dialogue lines
         dialogueEnabled = true; //setting dialogue bool for other classes to reference
@@ -47,6 +54,7 @@ public class DialogueSequenceManager : MonoBehaviour
         {
             currentLine += 1;
             displayedDialogue.text = currentSequence.sequence[currentLine].dialogueLine;
+            displayedDialogue.color = currentSequence.sequence[currentLine].textColor;
         }
 
         else
@@ -86,6 +94,7 @@ public class DialogueSequenceManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return) && dialogueEnabled == true)
         {
+            Debug.Log("registered enter");
             ContinueDialogue();
         }
     }

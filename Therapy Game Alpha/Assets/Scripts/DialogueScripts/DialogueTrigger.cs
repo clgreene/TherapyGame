@@ -8,9 +8,8 @@ public class DialogueTrigger : MonoBehaviour
     
 
     DialogueSequenceManager dialogueManager;
-    public SaveFile currentStatus;
-    public string charName;
-    DialogueSequenceObject triggeredSequence;
+    SaveFile currentStatus;
+    public DialogueSequenceObject triggeredSequence;
     DialogueTrigger me;
 
     public UnityEvent endEvent;
@@ -18,47 +17,34 @@ public class DialogueTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        switch (charName)
-        {
-            case "Synthetic":
-                triggeredSequence = currentStatus.Synthetic_Dialogue;
-                break;
-            case "Nova":
-                triggeredSequence = currentStatus.Nova_Dialogue;
-                break;
-            case "MrvN":
-                triggeredSequence = currentStatus.MrvN_Dialogue;
-                break;
-            case "Sweeper":
-                triggeredSequence = currentStatus.Sweeper_Dialogue;
-                break;
+        dialogueManager = FindObjectOfType<DialogueSequenceManager>(); //find the dialogue manager in the scene
 
-        }
-        dialogueManager = FindObjectOfType<DialogueSequenceManager>();
+        currentStatus = dialogueManager.currentStatus; //find the current status set it.
+
         me = this;
     }
 
     //function that starts a dialogue sequence
     public void StartDialogue()
     {
-        switch (charName)
+        switch (currentStatus.current_Dialogue.sequence[0].charName)
         {
-            case "Synthetic":
+            case SequenceClass.Character.synthetic:
                 triggeredSequence = currentStatus.Synthetic_Dialogue;
                 break;
-            case "Nova":
+            case SequenceClass.Character.nova:
                 triggeredSequence = currentStatus.Nova_Dialogue;
                 break;
-            case "MrvN":
+            case SequenceClass.Character.mrvn:
                 triggeredSequence = currentStatus.MrvN_Dialogue;
                 break;
-            case "Sweeper":
+            case SequenceClass.Character.sweeper:
                 triggeredSequence = currentStatus.Sweeper_Dialogue;
                 break;
 
-        }//who are we talking to?
+        } //who are we talking to
 
-        dialogueManager.currentSequence = triggeredSequence;
+        dialogueManager.currentSequence = currentStatus.current_Dialogue;
         dialogueManager.currentTrigger = me;
         dialogueManager.StartDialogue();
 

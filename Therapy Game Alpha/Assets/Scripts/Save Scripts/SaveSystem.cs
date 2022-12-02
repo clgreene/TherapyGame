@@ -90,43 +90,47 @@ public class SaveSystem : MonoBehaviour
                 case 1:
                     if (choice == 1)
                     {
+                        currentStatus = defaultStatus;
                         string saveOneJson = JsonUtility.ToJson(defaultStatus);
                         File.WriteAllText(Application.dataPath + "/saveFileOne.json", saveOneJson);
-                        SceneManager.LoadScene(currentStatus.current_Dialogue.sequence[0].scene.ToString(), LoadSceneMode.Single);
+                        SceneManager.LoadScene(currentStatus.scene.ToString(), LoadSceneMode.Single);
                     }
                     else
                     {
                         mainScreen.GetComponent<Canvas>().enabled = true;
                         confirmScreen.GetComponent<Canvas>().enabled = false;
                     }
-
+                    selected = false;
                     break;
                 case 2:
                     if (choice == 1)
                     {
+                        currentStatus = defaultStatus;
                         string saveTwoJson = JsonUtility.ToJson(defaultStatus);
                         File.WriteAllText(Application.dataPath + "/saveFileTwo.json", saveTwoJson);
-                        SceneManager.LoadScene(currentStatus.current_Dialogue.sequence[0].scene.ToString(), LoadSceneMode.Single);
+                        SceneManager.LoadScene(currentStatus.scene.ToString(), LoadSceneMode.Single);
                     }
                     else
                     {
                         mainScreen.GetComponent<Canvas>().enabled = true;
                         confirmScreen.GetComponent<Canvas>().enabled = false;
                     }
-
+                    selected = false;
                     break;
                 case 3:
                     if (choice == 1)
                     {
+                        currentStatus = defaultStatus;
                         string saveThreeJson = JsonUtility.ToJson(defaultStatus);
                         File.WriteAllText(Application.dataPath + "/saveFileThree.json", saveThreeJson);
-                        SceneManager.LoadScene(currentStatus.current_Dialogue.sequence[0].scene.ToString(), LoadSceneMode.Single);
+                        SceneManager.LoadScene(currentStatus.scene.ToString(), LoadSceneMode.Single);
                     }
                     else
                     {
                         mainScreen.GetComponent<Canvas>().enabled = true;
                         confirmScreen.GetComponent<Canvas>().enabled = false;
                     }
+                    selected = false;
                     break;
             }
         
@@ -141,42 +145,45 @@ public class SaveSystem : MonoBehaviour
                     {
                         string saveOneJson = File.ReadAllText(Application.dataPath + "/saveFileOne.json");
                         JsonUtility.FromJsonOverwrite(saveOneJson, currentStatus);
-                        SceneManager.LoadScene(currentStatus.current_Dialogue.sequence[0].scene.ToString(), LoadSceneMode.Single);
+                        SceneManager.LoadScene(currentStatus.scene.ToString(), LoadSceneMode.Single);
                     }
                     else
                     {
                         mainScreen.GetComponent<Canvas>().enabled = true;
                         confirmScreen.GetComponent<Canvas>().enabled = false;
                     }
+                    selected = false;
                     break;
                 case 2:
                     if (choice == 1)
                     {
                         string saveTwoJson = File.ReadAllText(Application.dataPath + "/saveFileTwo.json");
                         JsonUtility.FromJsonOverwrite(saveTwoJson, currentStatus);
-                        SceneManager.LoadScene(currentStatus.current_Dialogue.sequence[0].scene.ToString(), LoadSceneMode.Single);
+                        SceneManager.LoadScene(currentStatus.scene.ToString(), LoadSceneMode.Single);
                     }
                     else
                     {
                         mainScreen.GetComponent<Canvas>().enabled = true;
                         confirmScreen.GetComponent<Canvas>().enabled = false;
                     }
+                    selected = false;
                     break;
                 case 3:
                     if (choice == 1)
                     {
                         string saveThreeJson = File.ReadAllText(Application.dataPath + "/saveFileThree.json");
                         JsonUtility.FromJsonOverwrite(saveThreeJson, currentStatus);
-                        SceneManager.LoadScene(currentStatus.current_Dialogue.sequence[0].scene.ToString(), LoadSceneMode.Single);
+                        SceneManager.LoadScene(currentStatus.scene.ToString(), LoadSceneMode.Single);
                     }
                     else
                     {
                         mainScreen.GetComponent<Canvas>().enabled = true;
                         confirmScreen.GetComponent<Canvas>().enabled = false;
                     }
+                    selected = false;
                     break;
             }
-        } //if file does exist, load it in and start game
+        } //if file does exist, load it in and start game // needs to overwrite current status with json file
 
     }
 

@@ -16,7 +16,8 @@ public class SaveFile : ScriptableObject
         menu,
         office,
         boss,
-        apartment
+        apartment,
+        bar
     }
 
 

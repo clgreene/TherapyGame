@@ -11,11 +11,13 @@ public class SequenceClass
     //initializing enums
     public enum Character
     {
+        pc,
         synthetic,
         sweeper,
         ash,
         burk,
-        mrvn
+        mrvn,
+        nova
     }
 
     public enum Scenes
@@ -28,6 +30,7 @@ public class SequenceClass
 
     public Character charName;
     public string dialogueLine;
+    public Color textColor;
     public GameObject portrait;
     public Scenes scene;
 

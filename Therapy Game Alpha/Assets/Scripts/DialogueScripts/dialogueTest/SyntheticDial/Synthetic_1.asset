@@ -13,12 +13,44 @@ MonoBehaviour:
   m_Name: Synthetic_1
   m_EditorClassIdentifier: 
   sequence:
-  - charName: 0
-    dialogueLine: Hello
+  - charName: 1
+    dialogueLine: We are here to offer you a job.
+    textColor: {r: 0.78075826, g: 1, b: 0.6650944, a: 0}
     portrait: {fileID: 0}
     scene: 0
   - charName: 0
-    dialogueLine: Hi
+    dialogueLine: A job? Why would the synthetic need someone like me?
+    textColor: {r: 0.6839622, g: 0.7045567, b: 1, a: 0}
+    portrait: {fileID: 0}
+    scene: 0
+  - charName: 1
+    dialogueLine: A Psychologist?
+    textColor: {r: 0.7803922, g: 1, b: 0.6666667, a: 1}
+    portrait: {fileID: 0}
+    scene: 0
+  - charName: 0
+    dialogueLine: An addict.
+    textColor: {r: 0.6839622, g: 0.7045567, b: 1, a: 0}
+    portrait: {fileID: 0}
+    scene: 0
+  - charName: 1
+    dialogueLine: Because you have no future with your own race.
+    textColor: {r: 0.7803922, g: 1, b: 0.6666667, a: 1}
+    portrait: {fileID: 0}
+    scene: 0
+  - charName: 1
+    dialogueLine: Because you need the money to continue you habit.
+    textColor: {r: 0.7803922, g: 1, b: 0.6666667, a: 1}
+    portrait: {fileID: 0}
+    scene: 0
+  - charName: 1
+    dialogueLine: And because if you died no one would care.
+    textColor: {r: 0.7803922, g: 1, b: 0.6666667, a: 1}
+    portrait: {fileID: 0}
+    scene: 0
+  - charName: 0
+    dialogueLine: <i>Jesus... what are they asking me to do?</i>
+    textColor: {r: 0.6839622, g: 0.7045567, b: 1, a: 0}
     portrait: {fileID: 0}
     scene: 0
   responses: []
